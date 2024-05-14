@@ -222,5 +222,10 @@ for (let i = 0; i < divArray.length; i++) {
     divArray[i].textContent = (i + 1) * 10
     // rgb(255, 255, 255) blanc => rgb(0, 0, 0) noir
     // `rgb(${20 * i}, ${20 * i}, ${20 * i})`
+
+    // changer la couleur des box en fonction de l'indice i
     divArray[i].style.backgroundColor = "red"
 }
+
+// difficulté supplémentaire, ajouter des séquences de 3 couleurs successives dans les box
+const colors = ['#9fd3c7', '#385170', '#142d4c']
