@@ -28,13 +28,11 @@ const people = [
     { name: "Louis", gender: "male" },
 ]
 
-for (let n = 0; n < people.length; n++) {
-    if (people[n].gender === "female" && people[n].name.length <= 6 || people[n].gender === "male" && people[n].name.length > 6) {
-        console.log(people[n].name)
-    }
-}
-
-
+// for (let n = 0; n < people.length; n++) {
+//     if (people[n].gender === "female" && people[n].name.length <= 6 || people[n].gender === "male" && people[n].name.length > 6) {
+//         console.log(people[n].name)
+//     }
+// }
 
 const habitants = [
     {
@@ -73,3 +71,83 @@ const habitants = [
         town: "Bordeaux"
     },
 ]
+
+// people["name"] === people.name
+
+// Ecrire la boucle qui affiche uniquement les habitants de Paris
+// for (let i = 0; i < habitants.length; i++) {
+//     if (habitants[i].town === "Paris") {
+//         console.log(habitants[i].name)
+//     }
+// }
+
+// Ecrire la boucle qui affiche uniquement les personnes ayant plus de 60 ans
+// for (let i = 0; i < habitants.length; i++) {
+//     if (habitants[i].year > 60) {
+//         console.log(habitants[i].name)
+//     }
+// }
+
+// Ecrire la boucle qui affiche uniquement les personnes ayant plus de 60 ans à Paris
+// for (let i = 0; i < habitants.length; i++) {
+//     if (habitants[i].year > 60 && habitants[i].town === "Paris") {
+//         console.log(habitants[i].name)
+//     }
+// }
+
+// BONUS
+// Afficher le nombre de personnes qui ont moins de 40 ans
+let peopleUnder40 = 0
+
+for (let i = 0; i < habitants.length; i++) {
+    if (habitants[i].year < 40) {
+        peopleUnder40++
+    }
+}
+
+console.log(peopleUnder40)
+
+// Stocker dans un nouveau tableau les noms des personnes qui ont moins de 40 ans
+let arr = []
+for (let i = 0; i < habitants.length; i++) {
+    if (habitants[i].year < 40) {
+        arr.push(habitants[i])
+    }
+}
+console.log(arr)
+
+// Calculer l'âge moyen des habitants de Bordeaux
+// Moyenne = somme de tous les âges / nb d'habitants
+
+let ageTotal = 0
+let nbHabBx = 0
+
+for (let i = 0; i < habitants.length; i++) {
+    if (habitants[i].town === "Bordeaux") {
+        ageTotal += habitants[i].year
+        nbHabBx++
+    }
+}
+
+const avg = ageTotal / nbHabBx
+console.log(Math.round(avg))
+
+// Retourne un tableau des habitants de Paris dont l'âge est inférieur à la moyenne de l'âge des habitants de Paris
+let habParis = []
+let total = 0
+for (let i = 0; i < habitants.length; i++) {
+    if (habitants[i].town === "Paris") {
+        habParis.push(habitants[i])
+        total += habitants[i].year
+    }
+}
+
+let average = total / habParis.length
+let resultArr = []
+for (let i = 0; i < habParis.length; i++) {
+    if (habParis[i].year < average) {
+        resultArr.push(habParis[i])
+    }
+}
+
+console.log(resultArr)
