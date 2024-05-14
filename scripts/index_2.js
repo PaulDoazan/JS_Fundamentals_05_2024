@@ -161,22 +161,66 @@ let str1 = "Bonjour tout le monde"
 let str2 = "J'habite à Talence"
 let str3 = "Je pratique la pelote basque"
 
+getNbCharacters(str1)
+getNbCharacters(str2)
+getNbCharacters(str3)
+
 function getNbCharacters(maChaineDeCaractere) {
     const nbChars = maChaineDeCaractere.length
     const sentence = `Il y a ${nbChars} caractères dans cette phrase.`
     console.log(sentence)
 }
 
-getNbCharacters(str1)
-getNbCharacters(str2)
-getNbCharacters(str3)
+getSum(12, 13) // ==> 25 affiché en console
+getSum(142, 53)
 
-// const nbChars1 = str1.length
-// const sentence1 = `Il y a ${nbChars1} lettres dans cette phrase.`
-// console.log(sentence1)
-// const nbChars2 = str2.length
-// const sentence2 = `Il y a ${nbChars2} lettres dans cette phrase.`
-// console.log(sentence2)
-// const nbChars3 = str3.length
-// const sentence3 = `Il y a ${nbChars3} lettres dans cette phrase.`
-// console.log(sentence3)
+function getSum(number1, number2) {
+    const sum = number1 + number2
+    return sum
+}
+
+// Ecrire une fonction minusTen() qui soustrait 10 à un nombre passé en paramètre et qui affiche en console "25 - 10 = 15"
+const leResultatDeMaFonction = getSum(12, 13)
+minusTen(leResultatDeMaFonction)
+
+function minusTen(nb) {
+    const result = nb - 10
+    const str = `Mon paramètre ${nb} auquel je retranche dix vaut ${result}`
+    console.log(str)
+}
+
+///
+
+const myNumbers = [12, 42, 12, 2, 32, 14, 53]
+const myNumbers2 = [12, 42, 12, 2, 32]
+
+// fonction qui calcule la somme totale des éléments d'un tableau
+function getTotal(paramArray) {
+    let total = 0
+    for (let i = 0; i < paramArray.length; i++) {
+        total += paramArray[i]
+    }
+
+    // console.log("la fonction a bien été exécutée")
+    return total
+}
+
+getTotal(myNumbers)
+getTotal(myNumbers2)
+// console.log(result, result2)
+
+// fonction qui retourne le plus petit nombre d'un tableau
+
+
+// INTERACTION AVEC LE DOM
+// const firstDiv = document.querySelector('.box')
+// const firstDiv = document.querySelector('.box')
+
+const divArray = document.querySelectorAll('.box')
+
+for (let i = 0; i < divArray.length; i++) {
+    divArray[i].textContent = (i + 1) * 10
+    // rgb(255, 255, 255) blanc => rgb(0, 0, 0) noir
+    // `rgb(${20 * i}, ${20 * i}, ${20 * i})`
+    divArray[i].style.backgroundColor = "red"
+}
