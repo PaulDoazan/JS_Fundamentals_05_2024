@@ -105,7 +105,7 @@ for (let i = 0; i < habitants.length; i++) {
     }
 }
 
-console.log(peopleUnder40)
+// console.log(peopleUnder40)
 
 // Stocker dans un nouveau tableau les noms des personnes qui ont moins de 40 ans
 let arr = []
@@ -114,7 +114,7 @@ for (let i = 0; i < habitants.length; i++) {
         arr.push(habitants[i])
     }
 }
-console.log(arr)
+// console.log(arr)
 
 // Calculer l'âge moyen des habitants de Bordeaux
 // Moyenne = somme de tous les âges / nb d'habitants
@@ -130,7 +130,7 @@ for (let i = 0; i < habitants.length; i++) {
 }
 
 const avg = ageTotal / nbHabBx
-console.log(Math.round(avg))
+// console.log(Math.round(avg))
 
 // Retourne un tableau des habitants de Paris dont l'âge est inférieur à la moyenne de l'âge des habitants de Paris
 let habParis = []
@@ -150,4 +150,33 @@ for (let i = 0; i < habParis.length; i++) {
     }
 }
 
-console.log(resultArr)
+// console.log(resultArr)
+
+
+/**
+ * LES FONCTIONS
+ */
+
+let str1 = "Bonjour tout le monde"
+let str2 = "J'habite à Talence"
+let str3 = "Je pratique la pelote basque"
+
+function getNbCharacters(maChaineDeCaractere) {
+    const nbChars = maChaineDeCaractere.length
+    const sentence = `Il y a ${nbChars} caractères dans cette phrase.`
+    console.log(sentence)
+}
+
+getNbCharacters(str1)
+getNbCharacters(str2)
+getNbCharacters(str3)
+
+// const nbChars1 = str1.length
+// const sentence1 = `Il y a ${nbChars1} lettres dans cette phrase.`
+// console.log(sentence1)
+// const nbChars2 = str2.length
+// const sentence2 = `Il y a ${nbChars2} lettres dans cette phrase.`
+// console.log(sentence2)
+// const nbChars3 = str3.length
+// const sentence3 = `Il y a ${nbChars3} lettres dans cette phrase.`
+// console.log(sentence3)
