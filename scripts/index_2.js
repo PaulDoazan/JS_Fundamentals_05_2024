@@ -224,7 +224,8 @@ for (let i = 0; i < divArray.length; i++) {
     // `rgb(${20 * i}, ${20 * i}, ${20 * i})`
 
     // changer la couleur des box en fonction de l'indice i
-    divArray[i].style.backgroundColor = "red"
+    divArray[i].style.backgroundColor = `rgb(0, 0, ${i * 30})`
+    divArray[i].style.color = `rgb(0, ${i * 30}, ${i * 30})`
 }
 
 // difficulté supplémentaire, ajouter des séquences de 3 couleurs successives dans les box
