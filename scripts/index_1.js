@@ -135,7 +135,7 @@ for (let i = 0; i < limit; i++) {
 
     // On affiche tous les "hello **", sauf le dernier
     if (i < limit - 3) {
-        console.log("hello : " + i)
+        // console.log("hello : " + i)
     }
 }
 
@@ -145,3 +145,47 @@ for (let i = 0; i < limit; i++) {
 // console.log("hello : 3")
 // console.log("hello : 4")
 
+
+const allowed = true
+
+// La portée des variables
+
+// if (allowed) {
+//     const myName3 = "Stéphane"
+// }
+
+// console.log(myName3)
+
+let string1 = "Bonjour"
+let string2 = " tout le monde"
+string1 += string2
+
+let nb3 = 16
+
+console.log(nb3 % 5)
+
+let arr3 = ["Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde", "Paul", "Pierre", "Mathilde"]
+
+console.log(arr3[arr3.length - 3])
+
+const car = {
+    brand: "Citroen",
+    model: "Berlingo",
+    year: 2014,
+    electric: false,
+    price: 15000,
+    accessories: ["barres sur toit", "ailerons"]
+}
+
+const car2 = {
+    brand: "Citroen",
+    model: "Berlingo",
+    year: 2021,
+    electric: true,
+    price: 40000,
+    accessories: ["barres sur toit", "ailerons", "néon sous le châssis"]
+}
+
+if (car2.accessories.length > 2) {
+    console.log("Cette voiture a plus de 2 accessoires")
+} 
