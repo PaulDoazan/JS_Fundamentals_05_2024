@@ -54,12 +54,27 @@ let passwords = [
 
 // Ecrire une fonction qui prend en paramètre une lettre et qui me retourne un tableau des mots de passe qui commencent par cette lettre
 
+const resArray = getPasswordsWithFirstChar(passwords, "z")
+console.log(resArray)
+
+function getPasswordsWithFirstChar(arr, char) {
+    let filteredPasswords = []
+
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i]
+        const firstCharacter = element[0]
+        // const thirdCharacter = element[2]
+
+        if (firstCharacter === char) {
+            filteredPasswords.push(element)
+        }
+    }
+
+    return filteredPasswords
+}
+
 const specialCharacters = ['&', '#', '{', '_', '*', '/', '!', '$', '°']
-
 // Ecrire une fonction qui ajoute à chacun des mots de passe des caracères spéciaux en fin de mdp, avec pour paramètres le tableau de mdp et le nombre de caractères à ajouter. Math.random() ==> nombre entre 0 et 1
-
-
-
 
 
 
@@ -92,6 +107,15 @@ const minusResult = substractNumber(10, 3)
 const minusResult2 = substractNumber(873, 241)
 console.log(minusResult, minusResult2)
 // 7 
-function substractNumber() {
+function substractNumber(nb1, nb2) {
+    const result = nb1 - nb2
+    return result
+}
 
+const multiplication = multiplyNumbers(3, 4, 5)
+console.log(multiplication)
+
+function multiplyNumbers(a, b, c) {
+    const result = a * b * c
+    return result
 }
