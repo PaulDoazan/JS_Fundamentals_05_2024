@@ -59,7 +59,7 @@ const passwords2 = ["oiqsdhfoçq", "osdfhsdf", "123456"]
 let resArray = getPasswordsWithFirstChar(passwords, "s")
 let resArray2 = getPasswordsWithFirstChar(passwords2, "o")
 
-console.log(resArray, resArray2)
+// console.log(resArray, resArray2)
 
 function getPasswordsWithFirstChar(arr, char) {
     let filteredPasswords = []
@@ -88,7 +88,7 @@ const specialCharacters = ['&', '#', '{', '_', '*', '/', '!', '$', '°']
 const res = complexOperation(43, 12)
 const res2 = complexOperation(12, 12)
 const res3 = complexOperation(14, 12)
-console.log(res, res2, res3)
+// console.log(res, res2, res3)
 
 function complexOperation(a, b) {
     const result = Math.floor((a + b) * (a - b) / Math.pow(b, 2) - a)
@@ -104,14 +104,14 @@ const square3 = squareNumber(42)
 function squareNumber(nb) {
     // const sqrNumber = nb * nb
     const sqrNumber = Math.pow(nb, 2)
-    console.log(`Le carré du nombre ${nb} est ${sqrNumber}`)
+    // console.log(`Le carré du nombre ${nb} est ${sqrNumber}`)
     return sqrNumber
 }
 
 // Ecrire une fonction qui soustrait un 2è paramètre à un 1er paramètre
 const minusResult = substractNumber(10, 3)
 const minusResult2 = substractNumber(873, 241)
-console.log(minusResult, minusResult2)
+// console.log(minusResult, minusResult2)
 // 7 
 function substractNumber(nb1, nb2) {
     const result = nb1 - nb2
@@ -144,7 +144,7 @@ const person2 = {
 // écrire une fonction qui prend un objet en paramètre, et qui retourne une chaîne de caractère : "Bonjour Paul Doazan !"
 
 const helloSentence = sayHello(person2)
-console.log(helloSentence)
+// console.log(helloSentence)
 
 function sayHello(obj) {
     return `Bonjour ${obj.firstname} ${obj.lastname} !`
@@ -154,7 +154,7 @@ function sayHello(obj) {
 
 const sentence1 = isAllowedToDrink(person1)
 const sentence2 = isAllowedToDrink(person2)
-console.log(sentence1, sentence2);
+// console.log(sentence1, sentence2);
 
 function isAllowedToDrink(param) {
     if (param.age > 21) {
@@ -163,3 +163,19 @@ function isAllowedToDrink(param) {
         return `${param.firstname} ${param.lastname} n'a pas le droit de boire de l'alcool aux USA.`
     }
 }
+
+
+/**
+ * INTERACTION AVEC LE DOM
+ */
+
+const divContainer = document.querySelector('.container')
+divContainer.style.backgroundColor = "yellow"
+
+divContainer.addEventListener("click", onContainerClick)
+
+function onContainerClick() {
+    console.log("Je viens de cliquer sur mon container")
+}
+
+// quand on clique sur le container, on change le backgroundColor
