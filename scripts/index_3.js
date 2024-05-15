@@ -80,6 +80,8 @@ function getPasswordsWithFirstChar(arr, char) {
 const specialCharacters = ['&', '#', '{', '_', '*', '/', '!', '$', '°']
 // Ecrire une fonction qui ajoute à chacun des mots de passe des caracères spéciaux en fin de mdp, avec pour paramètres le tableau de mdp et le nombre de caractères à ajouter. Math.random() ==> nombre entre 0 et 1
 
+// 1ère étape, on créé une table de correspondance {a : "#", b: "&" ... } pour les lettres
+// 2ème étape, on créé une fonction de hashage qui prend en paramètre un mdp et qui retourne une chaîne de caractère complexe
 
 
 
@@ -149,3 +151,15 @@ function sayHello(obj) {
 }
 
 // Ecrire une fonction qui prend en paramètre un objet et qui retourne la phrase : "Pierre Dupont n'a pas le droit de boire de l'alcool aux USA" / Paul Doazan a le droit de boire de l'alcool aux USA. Age légal de consommation alcool aux USA : 21
+
+const sentence1 = isAllowedToDrink(person1)
+const sentence2 = isAllowedToDrink(person2)
+console.log(sentence1, sentence2);
+
+function isAllowedToDrink(param) {
+    if (param.age > 21) {
+        return `${param.firstname} ${param.lastname} a le droit de boire de l'alcool aux USA.`
+    } else {
+        return `${param.firstname} ${param.lastname} n'a pas le droit de boire de l'alcool aux USA.`
+    }
+}
