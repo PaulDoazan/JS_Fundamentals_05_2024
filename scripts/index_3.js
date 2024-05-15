@@ -176,6 +176,7 @@ divContainer.addEventListener("click", onContainerClick)
 
 let containerIsYellow = true
 
+// quand on clique sur le container, on change le backgroundColor, on alterne entre 2 couleurs
 function onContainerClick() {
     // divContainer.style.backgroundColor = "green"
     if (containerIsYellow) {
@@ -186,4 +187,5 @@ function onContainerClick() {
     console.log(containerIsYellow)
 }
 
-// quand on clique sur le container, on change le backgroundColor, on alterne entre 2 couleurs
+// quand on clique sur le container, on change successivement la couleur selon le tableau suivant : 
+const colors = ['#9fd3c7', '#385170', '#142d4c']
