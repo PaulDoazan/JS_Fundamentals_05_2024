@@ -172,20 +172,35 @@ function isAllowedToDrink(param) {
 const divContainer = document.querySelector('.container')
 divContainer.style.backgroundColor = "yellow"
 
-divContainer.addEventListener("click", onContainerClick)
+// divContainer.addEventListener("click", onContainerClick)
+divContainer.addEventListener("click", onContainerClickArrayColor)
 
 let containerIsYellow = true
 
 // quand on clique sur le container, on change le backgroundColor, on alterne entre 2 couleurs
 function onContainerClick() {
-    // divContainer.style.backgroundColor = "green"
     if (containerIsYellow) {
         containerIsYellow = false
+        divContainer.style.backgroundColor = "blue"
     } else {
         containerIsYellow = true
+        divContainer.style.backgroundColor = "yellow"
     }
     console.log(containerIsYellow)
 }
 
 // quand on clique sur le container, on change successivement la couleur selon le tableau suivant : 
 const colors = ['#9fd3c7', '#385170', '#142d4c']
+
+let index = 0
+
+function onContainerClickArrayColor() {
+    index++
+
+    // if (index >= colors.length) {
+    //     index = 0
+    // }
+
+    // divContainer.style.backgroundColor = colors[index]
+    divContainer.style.backgroundColor = colors[index % colors.length]
+}
