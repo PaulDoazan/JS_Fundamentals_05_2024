@@ -54,8 +54,12 @@ let passwords = [
 
 // Ecrire une fonction qui prend en paramètre une lettre et qui me retourne un tableau des mots de passe qui commencent par cette lettre
 
-const resArray = getPasswordsWithFirstChar(passwords, "z")
-console.log(resArray)
+const passwords2 = ["oiqsdhfoçq", "osdfhsdf", "123456"]
+
+let resArray = getPasswordsWithFirstChar(passwords, "s")
+let resArray2 = getPasswordsWithFirstChar(passwords2, "o")
+
+console.log(resArray, resArray2)
 
 function getPasswordsWithFirstChar(arr, char) {
     let filteredPasswords = []
@@ -136,3 +140,12 @@ const person2 = {
 }
 
 // écrire une fonction qui prend un objet en paramètre, et qui retourne une chaîne de caractère : "Bonjour Paul Doazan !"
+
+const helloSentence = sayHello(person2)
+console.log(helloSentence)
+
+function sayHello(obj) {
+    return `Bonjour ${obj.firstname} ${obj.lastname} !`
+}
+
+// Ecrire une fonction qui prend en paramètre un objet et qui retourne la phrase : "Pierre Dupont n'a pas le droit de boire de l'alcool aux USA" / Paul Doazan a le droit de boire de l'alcool aux USA. Age légal de consommation alcool aux USA : 21
