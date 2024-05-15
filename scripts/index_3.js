@@ -113,9 +113,26 @@ function substractNumber(nb1, nb2) {
 }
 
 const multiplication = multiplyNumbers(3, 4, 5)
-console.log(multiplication)
 
 function multiplyNumbers(a, b, c) {
     const result = a * b * c
     return result
 }
+
+
+
+const person1 = {
+    firstname: "Paul",
+    lastname: "Doazan",
+    age: 36,
+    town: "Talence"
+}
+
+const person2 = {
+    firstname: "Pierre",
+    lastname: "Dupont",
+    age: 20,
+    town: "Marseille"
+}
+
+// écrire une fonction qui prend un objet en paramètre, et qui retourne une chaîne de caractère : "Bonjour Paul Doazan !"
