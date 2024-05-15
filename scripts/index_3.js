@@ -1,8 +1,8 @@
 console.log("Start day 3")
 
-for (let i = 0; i <= 20; i += 3) {
-    console.log(i * 10)
-}
+// for (let i = 0; i <= 20; i += 3) {
+//     console.log(i * 10)
+// }
 
 let passwords = [
     "password1",
@@ -30,3 +30,68 @@ let passwords = [
 ]
 
 // Afficher dans la console tous les mots de passe, avec une boucle for
+// for (let i = 0; i < passwords.length; i++) {
+//     console.log(passwords[i])
+// }
+
+// Afficher tous les mdp qui ont moins de 6 caractères
+// for (let i = 0; i < passwords.length; i++) {
+//     if (passwords[i].length < 6) {
+//         console.log(passwords[i])
+//     }
+// }
+
+// Afficher tous les mdp qui commencent par "p", string[0]
+// for (let i = 0; i < passwords.length; i++) {
+//     const element = passwords[i]
+//     const firstCharacter = element[0]
+//     // const thirdCharacter = element[2]
+
+//     if (firstCharacter === "p") {
+//         console.log(passwords[i])
+//     }
+// }
+
+// Ecrire une fonction qui prend en paramètre une lettre et qui me retourne un tableau des mots de passe qui commencent par cette lettre
+
+const specialCharacters = ['&', '#', '{', '_', '*', '/', '!', '$', '°']
+
+// Ecrire une fonction qui ajoute à chacun des mots de passe des caracères spéciaux en fin de mdp, avec pour paramètres le tableau de mdp et le nombre de caractères à ajouter. Math.random() ==> nombre entre 0 et 1
+
+
+
+
+
+
+
+const res = complexOperation(43, 12)
+const res2 = complexOperation(12, 12)
+const res3 = complexOperation(14, 12)
+console.log(res, res2, res3)
+
+function complexOperation(a, b) {
+    const result = Math.floor((a + b) * (a - b) / Math.pow(b, 2) - a)
+    return result
+}
+
+// Ecrire une fonction qui me retourne le carré d'un nombre et qui m'affiche "Le carré du nombre 'param' est 'result'"
+
+const square1 = squareNumber(8)
+const square2 = squareNumber(12)
+const square3 = squareNumber(42)
+
+function squareNumber(nb) {
+    // const sqrNumber = nb * nb
+    const sqrNumber = Math.pow(nb, 2)
+    console.log(`Le carré du nombre ${nb} est ${sqrNumber}`)
+    return sqrNumber
+}
+
+// Ecrire une fonction qui soustrait un 2è paramètre à un 1er paramètre
+const minusResult = substractNumber(10, 3)
+const minusResult2 = substractNumber(873, 241)
+console.log(minusResult, minusResult2)
+// 7 
+function substractNumber() {
+
+}

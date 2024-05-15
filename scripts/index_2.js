@@ -219,13 +219,13 @@ getTotal(myNumbers2)
 const divArray = document.querySelectorAll('.box')
 
 for (let i = 0; i < divArray.length; i++) {
-    divArray[i].textContent = (i + 1) * 10
+    // divArray[i].textContent = (i + 1) * 10
     // rgb(255, 255, 255) blanc => rgb(0, 0, 0) noir
     // `rgb(${20 * i}, ${20 * i}, ${20 * i})`
 
     // changer la couleur des box en fonction de l'indice i
     divArray[i].style.backgroundColor = `rgb(0, 0, ${i * 30})`
-    divArray[i].style.color = `rgb(0, ${i * 30}, ${i * 30})`
+    // divArray[i].style.color = `rgb(0, ${i * 30}, ${i * 30})`
 }
 
 // difficulté supplémentaire, ajouter des séquences de 3 couleurs successives dans les box
