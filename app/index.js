@@ -3,7 +3,7 @@ const body = document.querySelector("body")
 // récupérer les .to-modify
 // récupérer le .result-addition
 
-// implémenter une boucle pour remettre les 3 nombres à 0
+// implémenter une boucle pour remettre les 3 nombres à 0 à la première lecture du script
 
 btn.addEventListener("click", changeColor)
 

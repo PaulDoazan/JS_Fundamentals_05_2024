@@ -25,8 +25,13 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.sub-container {
+    display: flex;
 }
 
 .btn-change {
