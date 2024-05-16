@@ -10,8 +10,10 @@ for (let i = 0; i < numbers.length; i++) {
     numbers[i].textContent = randomNb
 }
 
-// 3. assigner à result la valeur de la somme totale
-result.textContent = total
+// 1. on déclare un listener sur result
+
+// 2. on déclare la fonction qui sera exécutée dans ce listener
+// result.textContent = total
 
 // btn.addEventListener("click", changeColor)
 
