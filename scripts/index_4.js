@@ -49,3 +49,12 @@ function sayHello(obj) {
 
 // écrire une fonction qui prend en paramètre une personne et qui retourne son IMC
 // imc =>  poids / taille²
+
+const bmiPers1 = bmi(pers1)
+console.log(bmiPers1)
+
+// Implémenter la boucle for() pour calculer toutes les IMC
+function bmi(obj) {
+    const result = obj.weight / Math.pow(obj.size, 2)
+    return result
+}
