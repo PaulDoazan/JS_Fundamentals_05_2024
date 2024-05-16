@@ -14,12 +14,21 @@ const pers2 = {
     town: "Nantes"
 }
 
-let helloSentence = sayHello()
+const pers3 = {
+    firstname: "Nicole",
+    lastname: "Boulby",
+    age: 50,
+    town: "Strasbourg"
+}
+
+let helloSentence = sayHello(pers3)
 helloSentence += " ?"
 console.log(helloSentence)
 // Bonjour Stéphane Durand, fait-il beau à Nantes ?
 
+// Intégrer les 3 personnes dans un tableau people, boucler sur le tableau pour exécuter la fonction autant de fois qu'il y a d'éléments dans le tableau
 
-function sayHello() {
-
+function sayHello(obj) {
+    return `Bonjour ${obj.firstname} ${obj.lastname}, fait-il beau à ${obj.town}`
 }
+
