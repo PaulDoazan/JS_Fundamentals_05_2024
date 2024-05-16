@@ -51,8 +51,8 @@ function sayHello(obj) {
 // imc =>  poids / taille²
 
 for (let i = 0; i < people.length; i++) {
-    const bmiPers = bmi(people[i])
-    console.log(bmiPers)
+    const displayBmiPers = displayBMI(people[i])
+    console.log(displayBmiPers)
 }
 
 
@@ -60,6 +60,13 @@ for (let i = 0; i < people.length; i++) {
 // Arrondir à 2 chiffres après la virgule le résultat, Math.round()
 function bmi(obj) {
     const result = obj.weight / Math.pow(obj.size, 2)
+
     // return Math.round(result * 100) / 100
     return result.toFixed(2)
+}
+
+// Ecrire une fonction qui prend en paramètre une personne et qui retourne "[firstname] a une imc de [imc]"
+function displayBMI(pers) {
+    const bmiResult = bmi(pers)
+    return `${pers.firstname} a une imc de ${bmiResult}`
 }
