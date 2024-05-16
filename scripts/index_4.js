@@ -48,4 +48,4 @@ function sayHello(obj) {
 
 
 // écrire une fonction qui prend en paramètre une personne et qui retourne son IMC
-// imc =>  poids / taille² 
+// imc =>  poids / taille²
