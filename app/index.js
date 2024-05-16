@@ -1,14 +1,14 @@
-console.log('ma web-app')
-
 const btn = document.querySelector(".btn-change")
 const body = document.querySelector("body")
+// récupérer les .to-modify
+// récupérer le .result-addition
+
+// implémenter une boucle pour remettre les 3 nombres à 0
 
 btn.addEventListener("click", changeColor)
 
 function changeColor() {
-    console.log("click")
     body.style.backgroundColor = getRandomColor()
-    // on change de façon aléatoire la couleur du body, Math.random()
 }
 
 function getRandomColor() {
