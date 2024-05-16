@@ -5,18 +5,21 @@ const numbers = document.querySelectorAll('.to-modify')
 // const result = document.querySelector(".result-addition")
 
 let total = 0
-for (let i = 0; i < numbers.length; i++) {
-    const randomNb = Math.round(Math.random() * 20)
-    total += randomNb
-    numbers[i].textContent = randomNb
-}
+init()
 
 // result.addEventListener('click', displayResult)
 input.addEventListener('change', check)
 // btn.addEventListener("click", changeColor)
 
 function check() {
-    console.log(input.value)
+
+    // implémenter le test pour savoir si la value est correcte 
+    // Number(input.value)
+    if (input.value == total) {
+        init()
+        changeColor()
+        input.value = ""
+    }
 }
 
 function changeColor() {
@@ -33,4 +36,13 @@ function getRandomColor() {
 
 function displayResult() {
     result.textContent = total
+}
+
+function init() {
+    total = 0
+    for (let i = 0; i < numbers.length; i++) {
+        const randomNb = Math.round(Math.random() * 20)
+        total += randomNb
+        numbers[i].textContent = randomNb
+    }
 }
